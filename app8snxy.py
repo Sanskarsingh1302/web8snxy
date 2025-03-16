@@ -108,7 +108,7 @@ if stop_detection:
 
 # Detection loop logic
 if st.session_state['is_detecting']:
-    cap = cv2.VideoCapture(camera_index)
+    cap = st.camera_input()
     stframe = st.empty()  # Streamlit video stream display
 
     while cap.isOpened():
