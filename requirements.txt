@@ -1,3 +1,4 @@
+opencv-python-headless
 streamlit
 
 ultralytics
@@ -11,4 +12,4 @@ yagmail
 plotly
 altair
 Pillow
-opencv-python-headless
+
