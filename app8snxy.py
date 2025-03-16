@@ -86,7 +86,7 @@ st.subheader("SCHOOL OF AERONAUTICAL ENGINEERING PRESENTS", divider='blue')
 st.title(" Live video-based Object Detection")
 
 # Get available cameras
-available_cams = available_cameras()
+available_cams = st.camera_input()
 if available_cams:
     camera_index = st.selectbox("Select a Camera", available_cams)
 else:
