@@ -85,13 +85,6 @@ def export_as_csv(detected_objects):
 st.subheader("SCHOOL OF AERONAUTICAL ENGINEERING PRESENTS", divider='blue')
 st.title(" Live video-based Object Detection")
 
-# Get available cameras
-available_cams = st.camera_input()
-if available_cams:
-    camera_index = st.selectbox("Select a Camera", available_cams)
-else:
-    st.warning("No camera found!")
-    st.stop()
 
 # Object selection for alerts
 object_to_alert = st.multiselect("Select objects to receive alerts for", 
