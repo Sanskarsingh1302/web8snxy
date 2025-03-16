@@ -37,19 +37,11 @@ def send_email_notification(detected_object, subject="Object Detection Alert"):
     time_taken = end_time - start_time  # Calculate time taken
     st.success(f"Email notification sent for detected object: {detected_object} in {time_taken:.2f} seconds.")
 
-# Function to detect available cameras
-def available_cameras():
-    available_cam_indexes = []
-    for i in range(10):  # Test for the first 10 camera indexes
-        cap = cv2.VideoCapture(i)
-        if cap.isOpened():
-            available_cam_indexes.append(i)
-            cap.release()
-    return available_cam_indexes
+
 
 # Function to detect objects in a video file
 def detect_objects_in_video(video_path, confidence_threshold):
-    cap = cv2.VideoCapture(video_path)
+    cap = st.camera_input()
     detected_objects = Counter()
     
     while cap.isOpened():
